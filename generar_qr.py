@@ -23,7 +23,7 @@ def generar_qr_y_codigo_barras(id_estudiante, nombre_completo, url_base):
     code39.save(f"barcode_{id_estudiante}_{nombre_formateado}")
 
 # URL base de la aplicación (ajústala según tus necesidades)
-url_base = "http://192.168.8.10:5000/qr-datos-estudiantes"
+url_base = "https://web-production-9c4d.up.railway.app/"
 
 for _, fila in datos.iterrows():
     generar_qr_y_codigo_barras(fila['ID'], fila['NOMBRE COMPLETO'], url_base)
